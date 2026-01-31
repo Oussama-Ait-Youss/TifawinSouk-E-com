@@ -14,9 +14,9 @@
             <h1 class="text-2xl font-bold text-gray-800">Product Catalog</h1>
             <p class="text-sm text-gray-600">Manage and organize your souk inventory</p>
         </div>
-        <a href="#" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-lg shadow-sm transition-all">
-            + Add New Product
-        </a>
+        <a href="/products/create" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-semibold rounded-lg shadow-sm transition-all">
+    + Add New Product
+</a>
     </div>
 
     <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
@@ -58,8 +58,8 @@
                         </p>
                     </td>
                     <td class="px-6 py-4 text-right space-x-2">
-                        <button class="text-sm font-medium text-indigo-600 hover:text-indigo-900">Edit</button>
-                        <button class="text-sm font-medium text-red-600 hover:text-red-900">Delete</button>
+                        <a href="/products/edit/{{$product->id}}" class="text-sm font-medium text-indigo-600 hover:text-indigo-900">Edit</a>
+                        <a href="/products/delete/{{$product->id}}" class="text-sm font-medium text-red-600 hover:text-red-900">Delete</a>
                     </td>
                 </tr>
                 @endforeach
