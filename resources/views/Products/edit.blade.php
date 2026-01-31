@@ -30,7 +30,13 @@
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2">Category</label>
                             <select name="category_id" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-indigo-500 transition-all outline-none bg-white">
-                                <option value="{{ $product->category_id }}">Select a Category</option>
+                                <option value="{{ $product->category_id }}">
+                                    @foreach ($categories as $category)
+                                        @if ($category->id == $product->category_id)
+                                            {{ $category->name }}
+                                        @endif
+                                    @endforeach
+ </option>
                                 @foreach($categories as $category)
                                     <option value="{{ $category->id }}">
                                         {{ $category->name }}
